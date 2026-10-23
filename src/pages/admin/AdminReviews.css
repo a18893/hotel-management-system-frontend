@@ -1,0 +1,267 @@
+/* ==== ADMIN REVIEWS PAGE === */
+.admin-reviews-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 30px;
+}
+
+/* === LOADING ==== */
+.admin-reviews-loading {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+}
+
+.review-spinner {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 6px solid #ececec;
+  border-top: 6px solid #d4af37;
+  animation: reviewSpin 0.9s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes reviewSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==== HERO === */
+.admin-reviews-hero {
+  background: linear-gradient(135deg, #d4af37, #f3d36d);
+  border-radius: 18px;
+  padding: 45px;
+  color: #222;
+  margin-bottom: 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.admin-reviews-hero h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.admin-reviews-hero p {
+  max-width: 760px;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ==== STATISTICS GRID ==== */
+.review-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 35px;
+}
+
+/* ==== STAT CARD === */
+.review-stat-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+  border-left: 6px solid transparent;
+}
+
+.review-stat-card:hover {
+  transform: translateY(-6px);
+}
+
+.review-stat-card span {
+  display: block;
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.review-stat-card h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* === CARD COLORS === */
+.review-stat-card.total {
+  border-color: #0d6efd;
+}
+
+.review-stat-card.average {
+  border-color: #ffc107;
+}
+
+.review-stat-card.five-star {
+  border-color: #28a745;
+}
+
+.review-stat-card.page {
+  border-color: #6f42c1;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1200px) {
+  .review-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-reviews-page {
+    padding: 18px;
+  }
+
+  .admin-reviews-hero {
+    padding: 30px;
+  }
+
+  .admin-reviews-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .review-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === REVIEW GRID === */
+.reviews-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* === EMPTY STATE ==== */
+.empty-review-state {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.empty-review-state h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #273043;
+  margin-bottom: 0.6rem;
+}
+
+.empty-review-state p {
+  color: #6c757d;
+  max-width: 500px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+/* === PAGINATION === */
+.pagination-wrapper {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pagination-btn {
+  border: none;
+  padding: 0.85rem 1.6rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0d6efd, #3f8cff);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(13, 110, 253, 0.25);
+}
+
+.pagination-btn:disabled {
+  background: #c8d2dc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.pagination-info {
+  font-size: 1rem;
+  color: #555;
+}
+
+.pagination-info strong {
+  color: #273043;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 992px) {
+  .review-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-reviews-page {
+    padding: 1.2rem;
+  }
+
+  .admin-reviews-hero {
+    padding: 2rem;
+  }
+
+  .admin-reviews-hero h1 {
+    font-size: 2rem;
+  }
+
+  .review-list-card {
+    padding: 1.5rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .pagination-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .review-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-reviews-hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .admin-reviews-hero p {
+    font-size: 0.95rem;
+  }
+
+  .review-stat-card {
+    padding: 1.4rem;
+  }
+
+  .review-stat-card h2 {
+    font-size: 2rem;
+  }
+
+  .pagination-btn {
+    width: 100%;
+  }
+}

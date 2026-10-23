@@ -1,0 +1,266 @@
+/*=== CREATE FACILITY PAGE ===*/
+.create-facility-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 50px;
+}
+
+/*=== HERO ===*/
+.create-facility-hero {
+  background: linear-gradient(135deg, #1f2937, #374151);
+  color: #fff;
+  border-radius: 24px;
+  padding: 45px 50px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+.create-facility-hero h1 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.create-facility-hero p {
+  font-size: 16px;
+  color: #d9d9d9;
+  max-width: 620px;
+  line-height: 1.7;
+}
+
+/*=== FORM CARD ===*/
+.facility-form-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 45px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+/*=== FORM GROUP ===*/
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+}
+
+.form-group label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #064fe0;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 15px;
+  transition: 0.3s;
+  background: #fff;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #c8a54d;
+  box-shadow: 0 0 0 4px rgba(200, 165, 77, 0.15);
+}
+
+/*=== ERROR ===*/
+.error-text {
+  color: #dc3545;
+  font-size: 13px;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+/*=== INFO BOX ===*/
+.facility-info-box {
+  margin-top: 40px;
+  background: #fff9ea;
+  border-left: 5px solid #c8a54d;
+  padding: 25px 30px;
+  border-radius: 16px;
+}
+
+.facility-info-box h3 {
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+}
+
+.facility-info-box ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.facility-info-box li {
+  margin-bottom: 10px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/*=== FORM ACTION BUTTONS ===*/
+
+.facility-form-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+/*=== ACTION BUTTONS ===*/
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.cancel-btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  background: #fc1f02;
+  color: #374151;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cancel-btn:hover {
+  background: #fc4242ee;
+  transform: translateY(-2px);
+}
+
+.submit-btn {
+  padding: 14px 34px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #c8a54d, #d4af37);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 10px 22px rgba(200, 165, 77, 0.3);
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 35px rgba(200, 165, 77, 0.4);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/*=== LOADING SCREEN ===*/
+
+.create-facility-loading {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-facility-loading h2 {
+  margin-top: 20px;
+  color: #444;
+}
+
+.facility-spinner {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 6px solid #ececec;
+  border-top: 6px solid #c8a54d;
+  animation: facilitySpin 0.9s linear infinite;
+}
+
+@keyframes facilitySpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*=== RESPONSIVE ===*/
+
+@media (max-width: 992px) {
+  .create-facility-page {
+    padding: 30px;
+  }
+
+  .create-facility-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 35px;
+  }
+
+  .facility-form-card {
+    padding: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .create-facility-page {
+    padding: 18px;
+  }
+
+  .create-facility-hero {
+    padding: 28px;
+  }
+
+  .create-facility-hero h1 {
+    font-size: 30px;
+  }
+
+  .facility-form-card {
+    padding: 25px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .submit-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-facility-hero {
+    padding: 22px;
+  }
+
+  .create-facility-hero h1 {
+    font-size: 26px;
+  }
+
+  .facility-form-card {
+    padding: 20px;
+  }
+
+  .facility-info-box {
+    padding: 20px;
+  }
+}

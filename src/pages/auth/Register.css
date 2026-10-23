@@ -1,0 +1,45 @@
+/*===  REGISTER PAGE ===*/
+
+.register-card {
+  max-width: 650px;
+}
+
+.register-title {
+  margin-bottom: var(--space-sm);
+}
+
+.register-subtitle {
+  text-align: center;
+
+  color: var(--color-text-light);
+
+  margin-bottom: var(--space-xl);
+
+  font-size: var(--font-size-sm);
+}
+
+.register-grid .form-input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.register-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.register-grid .form-group {
+  margin-bottom: 0;
+}
+
+.register-grid-full {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+  .register-grid {
+    grid-template-columns: 1fr;
+  }
+}

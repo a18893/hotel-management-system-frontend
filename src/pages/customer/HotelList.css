@@ -1,0 +1,114 @@
+/*===  HOTEL LIST PAGE  ===*/
+
+.hotel-list-page {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-lg);
+}
+
+/*===  HEADER  ===*/
+
+.hotel-list-header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.hotel-list-header h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+}
+
+.hotel-list-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-light);
+  line-height: var(--line-height);
+}
+
+/*===  HOTEL COUNT  ===*/
+
+.hotel-count {
+  margin-bottom: var(--space-xl);
+  color: var(--color-text-light);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+}
+
+/*===  HOTEL GRID  ===*/
+
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-xl);
+  align-items: stretch;
+}
+
+.hotel-grid > * {
+  display: flex;
+}
+
+/*===  STATUS MESSAGES  ===*/
+
+.hotel-list-message {
+  text-align: center;
+  padding: var(--space-3xl);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-light);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.hotel-list-message.error {
+  color: var(--color-danger);
+  border-color: rgba(220, 38, 38, 0.2);
+  background: rgba(220, 38, 38, 0.05);
+}
+
+/*===  RESPONSIVE  ===*/
+
+@media (max-width: 992px) {
+  .hotel-list-page {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .hotel-list-header h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hotel-grid {
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .hotel-list-header h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .hotel-list-header p {
+    font-size: var(--font-size-md);
+  }
+
+  .hotel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hotel-list-message {
+    padding: var(--space-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .hotel-list-page {
+    padding: var(--space-xl) var(--space-sm);
+  }
+
+  .hotel-count {
+    text-align: center;
+  }
+}

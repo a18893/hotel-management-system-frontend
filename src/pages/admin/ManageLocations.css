@@ -1,0 +1,315 @@
+/*===  PAGE ===*/
+.manage-locations-page {
+  padding: 40px;
+  background: #f6f8fb;
+  min-height: 100vh;
+}
+
+/*=== LOADING ===*/
+.manage-locations-loading {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #444;
+}
+
+.location-spinner {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 6px solid #ececec;
+  border-top: 6px solid #2563eb;
+  animation: locationSpin 0.9s linear infinite;
+  margin-bottom: 25px;
+}
+
+@keyframes locationSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.manage-locations-loading h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.manage-locations-loading p {
+  color: #666;
+}
+
+/*=== HERO ===*/
+.manage-locations-hero {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  border-radius: 20px;
+  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.25);
+}
+
+.manage-locations-hero h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.manage-locations-hero p {
+  margin-top: 8px;
+  opacity: 0.95;
+  font-size: 16px;
+}
+
+/*=== ADD BUTTON ===*/
+
+.add-location-btn {
+  background: white;
+  color: #2563eb;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.add-location-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/*=== STATS ===*/
+.location-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.location-stat-card {
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.location-stat-card h2 {
+  color: #2563eb;
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+.location-stat-card span {
+  color: #777;
+  font-weight: 600;
+}
+
+/*=== TABLE CARD ===*/
+.location-table-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.table-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.table-header p {
+  margin-top: 6px;
+  color: #64748b;
+}
+
+/*=== TABLE ===*/
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container thead {
+  background: #f8fafc;
+}
+
+.table-container th {
+  padding: 18px;
+  text-align: left;
+  color: #475569;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table-container td {
+  padding: 20px 18px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.table-container tbody tr {
+  transition: 0.25s;
+}
+
+.table-container tbody tr:hover {
+  background: #f8fbff;
+}
+
+/*=== LOCATION NAME ===*/
+
+.location-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.table-container small {
+  color: #94a3b8;
+}
+
+/*=== CITY BADGE ===*/
+.city-badge {
+  display: inline-block;
+  background: #dbeafe;
+  color: #2563eb;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/*=== ACTION BUTTONS ===*/
+
+.center {
+  text-align: center;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 9px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.edit-btn {
+  background: #facc15;
+  color: #78350f;
+}
+
+.edit-btn:hover {
+  background: #eab308;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+/*=== EMPTY STATE ===*/
+.location-empty {
+  padding: 70px 30px;
+  text-align: center;
+}
+
+.location-empty h3 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: #334155;
+}
+
+.location-empty p {
+  color: #64748b;
+  font-size: 16px;
+}
+
+/*=== RESPONSIVE ===*/
+@media (max-width: 992px) {
+  .manage-locations-page {
+    padding: 25px;
+  }
+
+  .manage-locations-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .manage-locations-page {
+    padding: 18px;
+  }
+
+  .manage-locations-hero h1 {
+    font-size: 28px;
+  }
+
+  .table-container table {
+    min-width: 760px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .manage-locations-hero {
+    padding: 25px;
+  }
+
+  .manage-locations-hero h1 {
+    font-size: 24px;
+  }
+
+  .location-stat-card h2 {
+    font-size: 34px;
+  }
+}

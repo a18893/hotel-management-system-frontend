@@ -1,0 +1,371 @@
+/*=== CREATE HOTEL PAGE ===*/
+
+.create-hotel-page {
+  max-width: 1300px;
+  margin: auto;
+  padding: 40px 30px 80px;
+  background: #f8f9fb;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/*=== HERO ===*/
+
+.create-hotel-hero {
+  background: linear-gradient(135deg, #ffffff, #fff8e6);
+  border-radius: 22px;
+  padding: 35px 45px;
+  margin-bottom: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+  border: 1px solid #064fe0;
+}
+
+.create-hotel-hero h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.create-hotel-hero p {
+  color: #666;
+  font-size: 1rem;
+  max-width: 650px;
+  line-height: 1.7;
+}
+
+/*=== FORM & 2-COLUMN LAYOUT ===*/
+
+.create-hotel-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Grid layout to split screen evenly into 2 columns */
+.form-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: start;
+}
+
+.form-left-col,
+.form-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/*=== FORM CARD ===*/
+
+.form-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ececec;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.form-card h2 {
+  font-size: 1.35rem;
+  color: #222;
+  margin-bottom: 25px;
+  font-weight: 700;
+  position: relative;
+}
+
+.form-card h2::after {
+  content: "";
+  width: 65px;
+  height: 4px;
+  background: #d4af37;
+  display: block;
+  margin-top: 10px;
+  border-radius: 999px;
+}
+
+/*=== GRID & INPUTS ===*/
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.form-card label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.92rem;
+}
+
+.form-card input,
+.form-card select,
+.form-card textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #064fe0;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  background: white;
+  transition:
+    border-color 0.25s,
+    box-shadow 0.25s,
+    transform 0.2s;
+}
+
+.form-card textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-card input:focus,
+.form-card select:focus,
+.form-card textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.18);
+  transform: translateY(-1px);
+}
+
+/*=== IMAGE UPLOAD GRID ===*/
+
+.image-upload-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.image-upload-card {
+  border: 1.5px dashed #d4af37;
+  border-radius: 14px;
+  padding: 14px 8px;
+  background: #fcfbfa;
+  text-align: center;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.image-upload-card:hover {
+  border-color: #064fe0;
+  background: #f4f7ff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(6, 79, 224, 0.06);
+}
+
+.image-upload-card .card-title {
+  display: block;
+  font-weight: 600;
+  color: #444;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.custom-file-upload {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px 16px;
+  background: #064fe0;
+  color: #ffffff !important;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(6, 79, 224, 0.2);
+  max-width: 100%;
+}
+
+.custom-file-upload:hover {
+  background: #043cb3;
+  box-shadow: 0 6px 14px rgba(6, 79, 224, 0.3);
+}
+
+.upload-icon {
+  width: 16px;
+  height: 16px;
+  stroke: #ffffff;
+  flex-shrink: 0;
+}
+
+.file-name-text {
+  margin-top: 8px;
+  font-size: 0.72rem;
+  color: #666;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.image-preview-wrapper {
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.image-preview-wrapper img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  display: block;
+}
+
+/*=== BUTTONS ===*/
+
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.cancel-btn,
+.submit-btn {
+  border: none;
+  border-radius: 12px;
+  padding: 14px 35px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn {
+  background: #dc2626;
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(220, 38, 38, 0.25);
+}
+
+.cancel-btn:hover {
+  background: #b91c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(220, 38, 38, 0.35);
+}
+
+.submit-btn {
+  background: #d4af37;
+  color: white;
+  box-shadow: 0 12px 25px rgba(212, 175, 55, 0.3);
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #bf9822;
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/*=== RESPONSIVE LAYOUT ===*/
+
+@media (max-width: 1100px) {
+  .form-layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .create-hotel-page {
+    padding: 25px 18px 50px;
+  }
+
+  .create-hotel-hero {
+    padding: 25px;
+  }
+
+  .create-hotel-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-card {
+    padding: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: span 1;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .submit-btn {
+    width: 100%;
+  }
+}
+
+/*===  DARK MODE ===*/
+
+body.dark .create-hotel-page {
+  background: #111827;
+}
+
+body.dark .create-hotel-hero,
+body.dark .form-card {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+body.dark .create-hotel-hero h1,
+body.dark .form-card h2,
+body.dark .form-card label {
+  color: #f3f4f6;
+}
+
+body.dark .create-hotel-hero p {
+  color: #cbd5e1;
+}
+
+body.dark .form-card input,
+body.dark .form-card select,
+body.dark .form-card textarea {
+  background: #111827;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+body.dark .image-upload-card {
+  background: #1f2937;
+  border-color: #d4af37;
+}
+
+body.dark .cancel-btn {
+  background: #ef4444;
+  color: white;
+}
+
+body.dark .cancel-btn:hover {
+  background: #dc2626;
+}

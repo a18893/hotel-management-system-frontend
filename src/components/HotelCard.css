@@ -1,0 +1,142 @@
+.hotel-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid #064fe0;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.hotel-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.hotel-card-image {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+}
+
+.hotel-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.hotel-card:hover img {
+  transform: scale(1.08);
+}
+
+.hotel-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.hotel-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.hotel-card-header h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.hotel-card-header span {
+  color: var(--color-text-light);
+  font-size: 0.85rem;
+}
+
+.hotel-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 5px 0;
+}
+
+.hotel-star {
+  color: #fbbf24;
+  font-size: 18px;
+}
+
+.hotel-rating small {
+  color: var(--color-text-light);
+}
+
+.hotel-description {
+  color: var(--color-text-light);
+  line-height: 1.7;
+  margin-bottom: 5px;
+  flex: 1;
+}
+
+.hotel-review {
+  font-style: italic;
+  color: var(--color-text-muted);
+  border-left: 4px solid var(--primary);
+  padding-left: 16px;
+  margin-bottom: 10px;
+}
+
+.hotel-room-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.hotel-room-info strong {
+  display: block;
+  color: var(--primary);
+  margin-top: 4px;
+}
+
+.hotel-price {
+  background: #f8fafc;
+  border-radius: var(--radius-md);
+  text-align: center;
+  padding: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hotel-price small {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.hotel-book-btn {
+  border: none;
+  background: var(--warning);
+  color: #000;
+  padding: 15px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition-normal);
+}
+
+.hotel-book-btn:hover {
+  background: #eab308;
+}
+
+@media (max-width: 768px) {
+  .hotel-card-header {
+    flex-direction: column;
+  }
+
+  .hotel-room-info {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,106 @@
+.review-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.review-card__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.review-card__header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.review-card__rating {
+  padding: 4px 10px;
+  background: #fff7e6;
+  color: #d97706;
+  border-radius: var(--radius-md);
+  border: 1px solid #f5d089;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+.review-card__user {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.review-card__divider {
+  width: 5px;
+  height: 5px;
+  background: var(--color-border);
+  border-radius: 50%;
+}
+
+.review-card__id {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-family: monospace;
+}
+
+.review-card__text {
+  line-height: 1.7;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-md);
+}
+
+.review-card__booking {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  letter-spacing: 0.8px;
+}
+
+.review-card__icon {
+  width: 12px;
+  height: 12px;
+}
+
+.review-card__delete {
+  align-self: center;
+  padding: 10px 18px;
+  background: #fee2e2;
+  color: var(--color-danger);
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+  transition: var(--transition-fast);
+}
+
+.review-card__delete:hover {
+  background: #fecaca;
+}
+
+@media (max-width: 768px) {
+  .review-card {
+    flex-direction: column;
+  }
+
+  .review-card__delete {
+    align-self: flex-start;
+  }
+}

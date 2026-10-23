@@ -1,0 +1,266 @@
+/*===   MANAGER DASHBOARD  ===*/
+
+.manager-dashboard {
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+/*===   HERO  ===*/
+
+.manager-hero {
+  background:
+    linear-gradient(rgba(12, 34, 56, 0.85), rgba(12, 34, 56, 0.85)),
+    url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 90px 0;
+  margin-bottom: 60px;
+}
+
+.manager-hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.manager-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  backdrop-filter: blur(10px);
+}
+
+.manager-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.manager-hero p {
+  font-size: 1.08rem;
+  max-width: 650px;
+  opacity: 0.95;
+  line-height: 1.8;
+}
+
+/*===   STATUS CARD  ===*/
+
+.manager-status-card {
+  background: white;
+  color: #222;
+  width: 300px;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.manager-status-card h4 {
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.status-online {
+  color: #28a745;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.manager-status-card p {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+/*===  STATS  ===*/
+
+.manager-stats {
+  margin-bottom: 60px;
+}
+
+.stat-card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  transition: 0.35s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #064fe0;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card h2 {
+  color: #0d6efd;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.stat-card p {
+  margin: 0;
+  color: #666;
+}
+
+/*===  SECTION TITLE  ===*/
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0c2238;
+  margin-bottom: 15px;
+}
+
+.section-title p {
+  color: #777;
+  font-size: 1.05rem;
+}
+
+/*===  CARDS  ===*/
+
+.manager-card {
+  background: white;
+  border-radius: 20px;
+  padding: 35px;
+  height: 100%;
+  transition: 0.35s;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #064fe0;
+}
+
+.manager-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.18);
+}
+
+.manager-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  background: linear-gradient(135deg, #0d6efd, #6ea8fe);
+  color: white;
+}
+
+.manager-card h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0c2238;
+  margin-bottom: 15px;
+}
+
+.manager-card p {
+  color: #666;
+  line-height: 1.8;
+  flex: 1;
+  margin-bottom: 25px;
+}
+
+/*===  STATUS CARD  ===*/
+
+.status-card {
+  background: linear-gradient(135deg, #fff7dc, #ffffff);
+}
+
+/*===  BUTTONS  ===*/
+
+.manager-card .btn {
+  border-radius: 12px;
+  font-weight: 600;
+  padding: 12px;
+}
+
+/*===  RESPONSIVE  ===*/
+
+@media (max-width: 992px) {
+  .manager-hero {
+    padding: 70px 0;
+    text-align: center;
+  }
+
+  .manager-hero-content {
+    flex-direction: column;
+  }
+
+  .manager-status-card {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .manager-hero h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .manager-hero {
+    padding: 55px 0;
+  }
+
+  .manager-hero h1 {
+    font-size: 2rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .manager-card {
+    padding: 25px;
+  }
+
+  .manager-icon {
+    width: 65px;
+    height: 65px;
+    font-size: 1.6rem;
+  }
+
+  .stat-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  .manager-badge {
+    font-size: 0.72rem;
+  }
+
+  .manager-hero p {
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    margin-bottom: 35px;
+  }
+
+  .manager-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .manager-card p {
+    font-size: 0.95rem;
+  }
+
+  .manager-status-card {
+    padding: 25px;
+  }
+}

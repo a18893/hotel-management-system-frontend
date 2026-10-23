@@ -1,0 +1,144 @@
+/* ===== GLOBAL STYLES Hotel Management System  ==== */
+
+/* ---------- HTML ---------- */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+/* ---------- BODY ---------- */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  color: var(--text-primary);
+  background: var(--background-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ---------- Headings ---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.3rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
+/* ---------- Paragraph ---------- */
+p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* ---------- Links ---------- */
+a {
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* ---------- Images ---------- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  font-family: inherit;
+}
+
+/* ---------- Inputs ---------- */
+input,
+textarea,
+select {
+  width: 100%;
+  font-family: inherit;
+}
+
+/* ---------- Placeholder ---------- */
+::placeholder {
+  color: var(--text-muted);
+}
+
+/* ---------- Selection ---------- */
+::selection {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-400);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* ---------- Sections ---------- */
+section {
+  width: 100%;
+}
+
+/* ---------- Main ---------- */
+main {
+  width: 100%;
+}
+
+/* ---------- Container ---------- */
+.container {
+  width: min(1200px, 92%);
+  margin-inline: auto;
+}
+
+/* ---------- Horizontal Rule ---------- */
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 2rem 0;
+}

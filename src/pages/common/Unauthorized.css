@@ -1,0 +1,145 @@
+/*===  UNAUTHORIZED PAGE  ===*/
+
+.unauthorized-page {
+  min-height: calc(100vh - var(--navbar-height));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-2xl);
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+}
+
+/*===  Card  ===*/
+
+.unauthorized-card {
+  max-width: 650px;
+  width: 100%;
+  background: var(--color-surface);
+  padding: var(--space-3xl);
+  border-radius: var(--radius-xl);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-normal);
+}
+
+.unauthorized-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/*===  Lock Icon  ===*/
+
+.unauthorized-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto var(--space-xl);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: 3rem;
+}
+
+.unauthorized-card h1 {
+  font-size: clamp(4rem, 10vw, 6rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-danger);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+/*===  Access Denied  ===*/
+.unauthorized-card h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+
+/*===  Description  ===*/
+.unauthorized-card p {
+  color: var(--color-text-light);
+  font-size: var(--font-size-lg);
+  line-height: 1.8;
+  margin-bottom: var(--space-2xl);
+}
+
+/*===  Buttons  ===*/
+.unauthorized-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.unauthorized-buttons .btn {
+  min-width: 170px;
+  padding: 12px 24px;
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-md);
+  transition: var(--transition-normal);
+}
+
+.unauthorized-buttons .btn:hover {
+  transform: translateY(-2px);
+}
+
+/*===  Responsive  ===*/
+
+@media (max-width: 768px) {
+  .unauthorized-page {
+    padding: var(--space-lg);
+  }
+
+  .unauthorized-card {
+    padding: var(--space-2xl);
+  }
+
+  .unauthorized-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 2.4rem;
+  }
+
+  .unauthorized-card h1 {
+    font-size: 4rem;
+  }
+
+  .unauthorized-card h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  .unauthorized-card p {
+    font-size: var(--font-size-md);
+  }
+
+  .unauthorized-buttons {
+    flex-direction: column;
+  }
+
+  .unauthorized-buttons .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .unauthorized-card {
+    padding: var(--space-xl);
+  }
+
+  .unauthorized-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+
+  .unauthorized-card h1 {
+    font-size: 3.5rem;
+  }
+
+  .unauthorized-card p {
+    font-size: 0.95rem;
+  }
+}
